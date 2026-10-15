@@ -1,5 +1,5 @@
 /*
-  LightController using Waveshare ESP32S3 6 channel relay bpard (optional 128x64 I2C OLED display)
+  LightController using Waveshare ESP32S3 6 channel relay board (optional 128x64 I2C OLED display)
   and RS485/SABus interface to remote switch modules.
   Didier Juges (c) 2025
   arduino-mqtt library by Joël Gähwiler:

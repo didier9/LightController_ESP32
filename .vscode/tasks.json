@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Commit message",
+      "default": "update"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Git: Commit & Push",
+      "type": "shell",
+      "command": "git add -A && git commit -m '${input:commitMessage}' && git push",
+      "windows": {
+        "command": "$git = if (Get-Command git -ErrorAction SilentlyContinue) { 'git' } else { 'C:/Program Files/Git/cmd/git.exe' }; & $git add -A; & $git commit -m '${input:commitMessage}'; & $git push"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Git: Pull",
+      "type": "shell",
+      "command": "git pull",
+      "windows": {
+        "command": "$git = if (Get-Command git -ErrorAction SilentlyContinue) { 'git' } else { 'C:/Program Files/Git/cmd/git.exe' }; & $git pull"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
